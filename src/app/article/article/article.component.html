@@ -1,0 +1,14 @@
+
+
+
+<div *ngFor="let article of articles | async">
+  <h3>{{ article.title}}</h3>
+  <p>{{ article.content }}</p>
+
+
+</div>
+<br>
+<br>
+<button (click)="addArticle()">
+  Add Post
+</button>
