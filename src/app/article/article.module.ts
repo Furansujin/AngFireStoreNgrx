@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { articleReducer } from './article.reducer';
 import { ArticleEffects } from './article.effects';
+import {UploadComponent} from "../upload/upload.component";
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { ArticleEffects } from './article.effects';
     EffectsModule.forFeature([ArticleEffects])
   ],
   exports: [ArticleComponent],
-  declarations: [ArticleComponent]
+  declarations: [ArticleComponent, UploadComponent]
 })
 export class ArticleModule { }

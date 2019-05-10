@@ -19,6 +19,8 @@ import { ArticleComponent } from './article/article/article.component';
 import {ArticleModule} from './article/article.module';
 export const firebaseConfig =  environment.firebaseConfig;
 import { storeFreeze } from 'ngrx-store-freeze';
+import { UploadComponent } from './upload/upload.component';
+import {AngularFireStorageModule} from "@angular/fire/storage";
 
 
 export const metaReducers: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
@@ -36,6 +38,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production ? [store
     EffectsModule.forRoot([]),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     PostModule,
     ArticleModule,
     AppRoutingModule,
